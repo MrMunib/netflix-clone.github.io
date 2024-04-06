@@ -1,0 +1,265 @@
+@import url("https://fonts.googleapis.com/css2?family=Martel+Sans:wght@200;300;400;600;700;800;900&display=swap");
+
+@font-face {
+  font-family: MyfontBold;
+  src: url(assests/font/NetflixSans-Bold.woff2);
+}
+@font-face {
+  font-family: MyfontLight;
+  src: url(assests/font/NetflixSans-Light.woff2);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: MyFontLight;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+.main {
+  /* Height Width */
+  width: 100vw;
+  height: 150vh;
+
+  /* Background */
+  background-image: url(assests/images/bg.jpeg);
+  background-size: max(1346px, 100vw);
+  background-position: center center;
+  background-repeat: no-repeat;
+
+  /* position */
+  position: relative;
+}
+
+.main .overlay {
+  /* Height Width  */
+  width: 100%;
+  height: 100%;
+
+  /* Background */
+  background-image: linear-gradient(
+    -180deg,
+    hsla(0, 0%, 0%, 1) 20%,
+    hsla(0, 0%, 0%, 0.421) 50%,
+    hsl(0, 0%, 0%) 100%
+  );
+
+  opacity: 0.8;
+
+  /* position */
+  position: absolute;
+  top: 0;
+}
+
+nav {
+  /* Height Width */
+  width: 85vw;
+  height: 62px;
+
+  padding: 2rem 0;
+
+  /* Display */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  /* Margin */
+  margin: 0 auto;
+
+  /* position */
+  position: absolute;
+  top: 2%;
+  left: 50%;
+  z-index: 10;
+
+  /* transform */
+  transform: translateX(-50%);
+}
+
+nav span svg {
+  width: clamp(88px, 900vw, 22vw);
+  height: 2.5rem;
+}
+
+nav div button {
+  padding: 8px 18px;
+  color: white;
+  background-color: #e50914;
+  outline: none;
+  border: none;
+  border-radius: 4px;
+  font-size: 13px;
+  font-family: sans-serif;
+  font-weight: bold;
+}
+
+.hero {
+  /* position */
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  /* Display */
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  gap: 60px;
+
+  /* Text Alignment */
+  text-align: center;
+
+  /* Font */
+  color: white;
+  font-style: normal;
+
+  /* Margin */
+  padding-top: 3rem;
+}
+
+.hero .hero-text {
+  /* Display */
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  align-content: center;
+  gap: 10px;
+
+  /* Text Alignment */
+  text-align: center;
+
+  /* Margin */
+  margin-top: 7rem;
+}
+
+.hero .hero-text :first-child {
+  /* Font */
+  font-family: MyFontBold;
+  font-weight: bolder;
+  font-size: clamp(2rem, 2.4rem, 11vw);
+  line-height: 40px;
+}
+
+.hero .hero-text :nth-child(2),
+.hero .hero-text :nth-child(3) {
+  /* Font */
+  font-size: clamp(1.125rem, 1.25rem, 1.25rem);
+  line-height: 25px;
+  font-family: MyFontLight;
+}
+
+.hero .hero-text :nth-child(2) {
+  margin-bottom: 1.5rem;
+}
+
+.mail-container {
+  /* Display */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  /* Height And Width */
+  width: 80%;
+
+  /* Padding */
+  padding: 2rem;
+}
+
+.mail-container input {
+  flex-grow: 0.4;
+
+  /* Font */
+  font-size: 1rem;
+  line-height: 1.5rem;
+
+  color: white;
+  padding: 16px;
+  background-color: rgba(7, 7, 8, 0.623);
+
+  /* Border and Outline */
+  outline: none;
+  border: none;
+  border-radius: 2px;
+
+  transition: all 0.25s;
+}
+
+.mail-container input:focus {
+  border: 1px solid #e50914;
+  outline: 3px solid white;
+  outline-offset: 2px;
+}
+
+.mail-container form input::placeholder {
+  font-size: 1rem;
+}
+
+.btn {
+  /* Background */
+  background-color: #e50914;
+
+  /* Padding */
+  padding: 16px 18px;
+
+  /* Border And Outline */
+  outline: none;
+  border: none;
+  border-radius: 4px;
+
+  /* Font */
+  color: white;
+  font-size: 1rem;
+  font-size: clamp(1rem, 1rem, 2rem);
+  line-height: 1.5rem;
+  font-family: sans-serif;
+  font-weight: bold;
+
+  /* Display */
+  display: flex;
+  align-items: center;
+
+  /* crusor */
+  cursor: pointer;
+}
+
+.btn i {
+  font-size: 2rem;
+  font-weight: lighter;
+}
+
+
+
+
+
+
+
+
+
+
+@media (min-width: 600px) {
+  .main {
+    height: 110vh;
+  }
+}
+@media (max-width: 320px) {
+  .hero-text {
+    padding-top: 100px;
+  }
+}
+@media (max-width: 600px) {
+  .mail-container {
+    flex-direction: column;
+  }
+  .mail-container input {
+    width: 100%;
+  }
+}
