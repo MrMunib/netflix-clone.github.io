@@ -126,7 +126,7 @@ nav div button {
 .hero {
   /* position */
   position: relative;
-  top: 45%;
+  top: 66%;
   left: 50%;
   transform: translate(-50%, -50%);
 
@@ -449,7 +449,7 @@ nav div button {
   }
 }
 @media (max-width: 320px) {
-  .section1 {
+  .a .section1 {
     height: 75vh;
     /* background-color: red; */
   }
@@ -462,7 +462,7 @@ nav div button {
 
   .hero {
     gap: 0px;
-    top: 35%;
+    top: 45%;
   }
 
   .hero .hero-text :nth-child(2) {
@@ -522,5 +522,9 @@ nav div button {
 @media (min-width: 960px) {
   :is(.section1, .section2, .section3, .section4) .left .description {
     font-size: 1.5rem;
+  }
+  .hero {
+    gap: 0px;
+    top: 55%;
   }
 }
