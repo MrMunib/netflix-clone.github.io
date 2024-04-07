@@ -196,7 +196,7 @@ nav div button {
   width: 80%;
 
   /* Padding */
-  padding: 2rem;
+  padding-bottom: 2rem;
 }
 
 .mail-container input {
@@ -536,6 +536,7 @@ footer div {
   .hero .hero-text :nth-child(2) {
     margin: 0.5rem 0;
   }
+
 }
 
 @media (max-width: 600px) {
