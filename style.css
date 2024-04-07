@@ -339,7 +339,7 @@ nav div button {
 
 .section1 .right > div {
   /* Height Width */
-  width: max(300px, 20vw);
+  width: max(300px, 45vw);
   height: 100%;
 
   /* Margin */
@@ -354,13 +354,11 @@ nav div button {
 .section2 .right > div {
   width: clamp(300px, 40vw, 50vw);
 }
+
 .section1 .right div img {
   width: inherit;
   position: absolute;
   z-index: 100;
-  /* left: 50%; 
-  top: 50%;
-  transform: translate(-50%, -50); */
 }
 
 .section1 .right div video {
@@ -381,18 +379,21 @@ nav div button {
   grid-area: left1;
 }
 
-.section3 {
-  grid-template-columns: repeat(1, 1fr);
-}
-
-.section3 .left {
+.section1 .left {
   padding-left: clamp(30px, 5vw, 5vw);
   width: 100%;
   gap: 10px;
 }
 
-.section3 .left .description {
-  font-size: 1.4rem;
+.section4 .left {
+  grid-area: right1;
+}
+.section4 .right {
+  grid-area: left1;
+}
+
+.section4 .right div {
+  width: max(270px, 40vw);
 }
 
 @media (min-width: 600px) {
@@ -401,6 +402,10 @@ nav div button {
   }
 }
 @media (max-width: 320px) {
+  .section1 {
+    height: 75vh;
+    /* background-color: red; */
+  }
   .hero-text {
     padding: 0.3rem;
   }
@@ -445,7 +450,7 @@ nav div button {
   }
 
   .section2 .left {
-    grid-area: row2;
+    grid-area: row1;
     text-align: center;
     align-items: center;
   }
@@ -459,14 +464,16 @@ nav div button {
   }
 
   .section2 .right {
-    grid-area: row1;
-  }
-
-  .section3 {
-    grid-template-rows: 1fr 70px;
+    grid-area: row2;
   }
 
   .section3 {
     height: fit-content;
+    grid-template-rows: 1fr 100px;
+  }
+}
+@media (min-width: 960px) {
+  :is(.section1, .section2, .section3, .section4) .left .description {
+    font-size: 1.5rem;
   }
 }
