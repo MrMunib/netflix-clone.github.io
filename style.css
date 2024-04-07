@@ -4,6 +4,7 @@
   font-family: MyfontBold;
   src: url(assests/font/NetflixSans-Bold.woff2);
 }
+
 @font-face {
   font-family: MyfontLight;
   src: url(assests/font/NetflixSans-Light.woff2);
@@ -52,12 +53,10 @@ body {
   height: 100%;
 
   /* Background */
-  background-image: linear-gradient(
-    -180deg,
-    hsla(0, 0%, 0%, 1) 20%,
-    hsla(0, 0%, 0%, 0.421) 50%,
-    hsl(0, 0%, 0%) 100%
-  );
+  background-image: linear-gradient(-180deg,
+      hsla(0, 0%, 0%, 1) 20%,
+      hsla(0, 0%, 0%, 0.421) 50%,
+      hsl(0, 0%, 0%) 100%);
 
   opacity: 0.8;
 
@@ -266,6 +265,7 @@ nav div button {
 :is(.btn, button):hover {
   background-color: #a61e25;
 }
+
 :is(.btn, button):active {
   background-color: #882026;
 }
@@ -337,7 +337,7 @@ nav div button {
   position: relative;
 }
 
-.section1 .right > div {
+.section1 .right>div {
   /* Height Width */
   width: max(300px, 45vw);
   height: 100%;
@@ -351,7 +351,7 @@ nav div button {
   justify-content: center;
 }
 
-.section2 .right > div {
+.section2 .right>div {
   width: clamp(300px, 40vw, 50vw);
 }
 
@@ -388,6 +388,7 @@ nav div button {
 .section4 .left {
   grid-area: right1;
 }
+
 .section4 .right {
   grid-area: left1;
 }
@@ -432,6 +433,7 @@ nav div button {
   text-align: center;
   margin: 3rem 0 1.5rem 0;
 }
+
 .ques {
   display: flex;
   align-items: center;
@@ -443,41 +445,45 @@ nav div button {
   display: none;
 }
 
-@media (min-width: 600px) {
-  .main {
-    height: 110vh;
-  }
-}
 @media (max-width: 320px) {
   .a .section1 {
     height: 75vh;
     /* background-color: red; */
   }
+
   .hero-text {
     padding: 0.3rem;
   }
+
   .mail-container {
     width: 110%;
   }
 
   .hero {
     gap: 0px;
-    top: 45%;
+    top: 35%;
   }
 
   .hero .hero-text :nth-child(2) {
     margin: 0.5rem 0;
   }
 }
+
 @media (max-width: 600px) {
   .mail-container {
     flex-direction: column;
   }
+
   .mail-container input {
     width: 100%;
   }
+
   .mail-container {
     width: 110%;
+  }
+
+  .main {
+    height: 110vh;
   }
 }
 
@@ -488,6 +494,10 @@ nav div button {
     grid-template-areas:
       "row1"
       "row2";
+  }
+
+  .hero {
+    top: 50%;
   }
 
   .section1 .left {
@@ -519,10 +529,12 @@ nav div button {
     grid-template-rows: 1fr 100px;
   }
 }
+
 @media (min-width: 960px) {
   :is(.section1, .section2, .section3, .section4) .left .description {
     font-size: 1.5rem;
   }
+
   .hero {
     gap: 0px;
     top: 55%;
