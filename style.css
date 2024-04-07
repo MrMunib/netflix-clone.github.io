@@ -196,7 +196,7 @@ nav div button {
   width: 80%;
 
   /* Padding */
-  padding-bottom: 2rem;
+  padding: 2rem;
 }
 
 .mail-container input {
@@ -467,6 +467,8 @@ nav div button {
 
 .mail-container-2 {
   width: 100%;
+  padding: 0;
+  padding-bottom: 2rem;
 }
 
 #email-end {
